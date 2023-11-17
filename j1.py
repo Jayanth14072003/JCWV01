@@ -1,11 +1,29 @@
-# eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6ImMyYjEzMzg0LTk3MDgtNGI1Ni04MWNjLWU3NDQyNmE2YjczOCIsInVzZXJUeXBlIjoiR1VFU1QiLCJhcHBOYW1lIjoiUkpJTF9KaW9DaW5lbWEiLCJkZXZpY2VJZCI6IjU0YmFmMDdhLWMzMDItNDY3OC04ZmI1LWNhNzQ3MmNhMjQzMyIsImRldmljZVR5cGUiOiJwaG9uZSIsIm9zIjoiaW9zIiwicHJvZmlsZUlkIjoiY2NiMzc3M2QtOTI4Ni00MTBkLTk1YjEtZWZlYWIxMjU1MDFjIiwiYWRJZCI6IjU0YmFmMDdhLWMzMDItNDY3OC04ZmI1LWNhNzQ3MmNhMjQzMyIsImV4cGVyaW1lbnRLZXkiOnsiY29uZmlnS2V5IjoiY2NiMzc3M2QtOTI4Ni00MTBkLTk1YjEtZWZlYWIxMjU1MDFjIiwiZ3JvdXBJZCI6MTc5M30sInByb2ZpbGVEZXRhaWxzIjp7InByb2ZpbGVUeXBlIjoiYWR1bHQiLCJjb250ZW50QWdlUmF0aW5nIjoiQSJ9fSwiZXhwIjoxNzAwMjQyODI4LCJpYXQiOjE3MDAyMzU2Mjh9.fWWgaC5Vgoc6A3wvhM88QtWKZGr6UKt0Ixw_6WjFcBmo_YC1gZddqZKUqewQRkUeU9yNKgAkVLFOnqxgqet17A
-
 from pathlib import Path
 import subprocess
 import jwt
+import requests
 import re
 
-access_token = input('access_token:')
+# Function to return the accesstoken of jiocinema
+def get_accesstoken():
+    IdURL = "https://cs-jv.voot.com/clickstream/v1/get-id"
+    GuestURL = "https://auth-jiocinema.voot.com/tokenservice/apis/v4/guest"
+    id = requests.get(url=IdURL).json()['id']
+
+    token = requests.post(url=GuestURL, json={
+            'adId': id,
+            "appName": "RJIL_JioCinema",
+            "appVersion": "23.10.13.0-841c2bc7",
+            "deviceId": id,
+            "deviceType": "phone",
+            "freshLaunch": True,
+            "os": "ios"
+        }, headers={
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
+        }).json()
+
+    return token["authToken"]
+access_token= get_accesstoken()
 
 print('\ntest link: https://www.jiocinema.com/movies/sergeant-bhojpuri/3767689\ntest link: https://www.jiocinema.com/tv-shows/kaalkoot/1/janam-din/3788001\n')
 
@@ -31,9 +49,8 @@ appName = decoded['data']['appName']
 
 ######
 
-import requests
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+# from requests.packages.urllib3.exceptions import InsecureRequestWarning
+# requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 headers2 = {
     'authority': 'apis-jiovoot.voot.com',
