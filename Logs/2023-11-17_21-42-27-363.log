@@ -1,0 +1,58 @@
+﻿LOG 2023/11/17
+Save Path: D:\Telegram_Bots\jiocenima\JiocinemaDownloader-main\Logs
+Task Start: 2023/11/17 21:42:27
+Task CommandLine: N_m3u8DL-RE -M format=mkv:muxer=ffmpeg --concurrent-download --log-level INFO --save-name video https://ak-mediavod.jiocinema.com/bpkvod/jcvod/widevine/65513b3b354222cca216656c_v1/65513b3b354222cca216656c_v1/index_jc_web_premium.mpd?hdnts=st=1700237544~exp=1700238144~acl=/bpkvod/jcvod/widevine/65513b3b354222cca216656c_v1/65513b3b354222cca216656c_v1/*~id=ccb3773d-9286-410d-95b1-efeab125501c~hmac=68b1150b8c3cf65fb178cb60466a5a16721e421e0af1eaa0276186a6c587d8b3 --key e0fb61b9d6165f34a510cba692207098:e05b65a4ef762a61face68d971dcb777 --key 08fcddd6760f50c2aa4a119905114bf7:8280c9cd96f57b9c637787d8bde6ba42 --key 48eaebe3dbe854f4a480a7f207a08bad:95e6d3da8ff1bb7f933b25e6617b17d0 --key c190d05c8a0e5635b30050d31e48a87c:1701323f23a0841405ae446b3bc2af69
+
+21:42:27.368 INFO : N_m3u8DL-RE (Beta version) 20230628
+21:42:27.394 EXTRA: ffmpeg => C:\ffmpeg\bin\ffmpeg.exe
+21:42:27.394 EXTRA: mp4decrypt => D:\Telegram_Bots\jiocenima\JiocinemaDownloader-main\mp4decrypt.exe
+21:42:27.394 INFO : Loading URL: https://ak-mediavod.jiocinema.com/bpkvod/jcvod/widevine/65513b3b354222cca216656c_v1/65513b3b354222cca216656c_v1/index_jc_web_premium.mpd?hdnts=st=1700237544~exp=1700238144~acl=/bpkvod/jcvod/widevine/65513b3b354222cca216656c_v1/65513b3b354222cca216656c_v1/*~id=ccb3773d-9286-410d-95b1-efeab125501c~hmac=68b1150b8c3cf65fb178cb60466a5a16721e421e0af1eaa0276186a6c587d8b3
+21:42:27.712 INFO : Content Matched: Dynamic Adaptive Streaming over HTTP
+21:42:27.713 INFO : Parsing streams...
+21:42:27.840 WARN : Writing meta json
+21:42:27.890 INFO : Extracted, there are 12 streams, with 7 basic streams, 4 audio streams, 1 subtitle streams
+21:42:27.891 INFO : Vid *CENC 1920x1080 | 2300 Kbps | video=2300000 | avc1.640028 | 603 Segments | ~20m05s
+21:42:27.893 INFO : Vid *CENC 1280x720 | 1200 Kbps | video=1200000 | avc1.64001F | 603 Segments | ~20m05s
+21:42:27.895 INFO : Vid *CENC 854x480 | 800 Kbps | video=800000 | avc1.4D401E | 603 Segments | ~20m05s
+21:42:27.896 INFO : Vid *CENC 640x360 | 600 Kbps | video=600000 | avc1.4D401E | 603 Segments | ~20m05s
+21:42:27.897 INFO : Vid *CENC 480x270 | 400 Kbps | video=400000 | avc1.4D4015 | 603 Segments | ~20m05s
+21:42:27.902 INFO : Vid *CENC 480x270 | 200 Kbps | video=200000 | avc1.4D4015 | 603 Segments | ~20m05s
+21:42:27.905 INFO : Vid 3200x180 | 1 Kbps | thumbnail | 13 Segments | ~21m40s
+21:42:27.908 INFO : Aud *CENC audio_kan=125375 | 125 Kbps | mp4a.40.2 | kn | 2CH | 603 Segments | ~20m05s
+21:42:27.911 INFO : Aud *CENC audio_kan=93375 | 93 Kbps | mp4a.40.2 | kn | 2CH | 603 Segments | ~20m05s
+21:42:27.914 INFO : Aud *CENC audio_kan=61378 | 61 Kbps | mp4a.40.2 | kn | 2CH | 603 Segments | ~20m05s
+21:42:27.916 INFO : Aud *CENC audio_kan=45380 | 45 Kbps | mp4a.40.2 | kn | 2CH | 603 Segments | ~20m05s
+21:42:27.917 INFO : Sub textstream_eng=1000 | en | stpp.ttml.im1t | 20 Segments | ~19m57s
+21:43:03.819 INFO : Parsing streams...
+21:43:03.833 INFO : Selected streams:
+21:43:03.835 INFO : Vid *CENC 1280x720 | 1200 Kbps | video=1200000 | avc1.64001F | 603 Segments | ~20m05s
+21:43:03.836 INFO : Vid *CENC 480x270 | 200 Kbps | video=200000 | avc1.4D4015 | 603 Segments | ~20m05s
+21:43:03.838 INFO : Aud *CENC audio_kan=125375 | 125 Kbps | mp4a.40.2 | kn | 2CH | 603 Segments | ~20m05s
+21:43:03.839 INFO : Sub textstream_eng=1000 | en | stpp.ttml.im1t | 20 Segments | ~19m57s
+21:43:03.840 WARN : Writing meta json
+21:43:03.856 INFO : Save Name: video
+21:43:03.858 WARN : MuxAfterDone is detected, binary merging is automatically enabled
+21:43:03.863 INFO : Start downloading...Aud audio_kan=125375 | 125 Kbps | mp4a.40.2 | kn | 2CH
+21:43:03.863 INFO : Start downloading...Vid 1280x720 | 1200 Kbps | video=1200000 | avc1.64001F
+21:43:03.863 INFO : Start downloading...Vid 480x270 | 200 Kbps | video=200000 | avc1.4D4015
+21:43:03.864 INFO : Start downloading...Sub textstream_eng=1000 | en | stpp.ttml.im1t
+21:43:04.139 WARN : Type: cenc
+21:43:04.143 WARN : PSSH(WV): Igo0MDAwMDczMjg5SOPclZsG
+21:43:04.147 WARN : KID: 48eaebe3dbe854f4a480a7f207a08bad
+21:43:04.151 WARN : Reading media info...
+21:43:04.249 INFO : [0x1]: Audio, aac (mp4a), 125 kb/s
+21:43:04.279 WARN : Type: cenc
+21:43:04.282 WARN : PSSH(WV): Igo0MDAwMDczMjg5SOPclZsG
+21:43:04.284 WARN : KID: 48eaebe3dbe854f4a480a7f207a08bad
+21:43:04.285 WARN : Reading media info...
+21:43:04.354 INFO : [0x1]: Video, h264 (avc1), 1280x720
+21:43:04.552 WARN : Type: cenc
+21:43:04.555 WARN : PSSH(WV): Igo0MDAwMDczMjg5SOPclZsG
+21:43:04.558 WARN : KID: 48eaebe3dbe854f4a480a7f207a08bad
+21:43:04.560 WARN : Reading media info...
+21:43:04.610 WARN : Reading media info...
+21:43:04.638 INFO : [0x1]: Video, h264 (avc1), 480x270
+21:43:04.689 INFO : [0x1]: Subtitle, ttml (stpp) (default)
+21:43:07.985 WARN : Extracting TTML(mp4) subtitle...
+21:43:08.032 INFO : Binary merging...
+21:43:08.301 WARN : Force Exit...
